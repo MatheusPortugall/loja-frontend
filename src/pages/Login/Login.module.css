@@ -1,0 +1,54 @@
+.loginContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginCard {
+    background-color: var(--card-bg-color);
+    border-radius: 10px;
+    height: 30vh;
+    width: 30vw;
+    font-family: var(--font);
+}
+
+.formLogin {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+}
+
+.inputContainer label {
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.inputContainer input {
+    height: 40px;
+    border: 1px solid var(--text-color);
+    border-radius: 8px;
+    box-shadow: none;
+    padding-left: 8px;
+}
+
+.buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonLogin {
+    padding: 10px 25px;
+    border-radius: 8px;
+    background-color: var(--success-color);
+    border: none;
+    color: var(--text-color-invert);
+    font-weight: bold;
+}
