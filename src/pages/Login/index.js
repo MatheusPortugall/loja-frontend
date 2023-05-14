@@ -10,6 +10,7 @@ function Login() {
         <section className={styles.loginContainer}>
             <div className={styles.loginCard}>
                 <form onSubmit={handleSubmit} className={styles.formLogin}>
+                    <p className={styles.titleLogin}>Astra store</p>
                     <div className={styles.inputContainer}>
                         <label for="usuario">Usuário</label>
                         <input id="usuario" type="text" name="usuario" required />
@@ -19,8 +20,9 @@ function Login() {
                         <input id="senha" type="password" name="usuario" required />
                     </div>
                     <div className={styles.buttonContainer}>
-                        <input type="submit" className={styles.buttonLogin} />
+                        <input type="submit" value="Entrar" className={styles.buttonLogin} />
                     </div>
+                    <a href="/" className={styles.link}>Criar conta</a>
                 </form>
             </div>
         </section>

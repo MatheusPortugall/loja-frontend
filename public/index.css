@@ -7,6 +7,8 @@
     --card-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     --font: 'Rubik', sans-serif;
     --success-color: #04AC10;
+    --fail-color: #DA3755;
+    --link-color: #3773DA;
 }
 
 * {

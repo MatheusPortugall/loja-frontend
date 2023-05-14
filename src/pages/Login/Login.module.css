@@ -9,9 +9,10 @@
 .loginCard {
     background-color: var(--card-bg-color);
     border-radius: 10px;
-    height: 30vh;
+    height: 40vh;
     width: 30vw;
     font-family: var(--font);
+    box-shadow: var(--card-shadow);
 }
 
 .formLogin {
@@ -23,6 +24,19 @@
     display: flex;
     flex-direction: column;
     margin: 8px;
+}
+
+.link {
+    color: var(--link-color);
+    cursor: pointer;
+    text-align: center;
+    margin: 8px 0px;
+    text-decoration: none;
+}
+
+.link:hover {
+    transition: .3s;
+    text-decoration: underline;
 }
 
 .inputContainer label {
@@ -51,4 +65,12 @@
     border: none;
     color: var(--text-color-invert);
     font-weight: bold;
+}
+
+.titleLogin {
+    font-family: var(--font);
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    margin: 10px 0px;
 }
