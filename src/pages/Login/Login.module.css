@@ -67,6 +67,11 @@
     font-weight: bold;
 }
 
+.buttonLogin:hover {
+    transition: 0.3s;
+    opacity: 0.8;
+}
+
 .titleLogin {
     font-family: var(--font);
     font-weight: bold;

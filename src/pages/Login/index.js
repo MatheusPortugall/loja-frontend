@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { requestLogin } from "../../api/authApi";
-import request from "../../api/request";
 import styles from "./Login.module.css";
+import { authUser } from '../../actions/authActions';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 function Login() {
 
     const [login, setLogin] = useState({});
+    const dispatch = useDispatch();
+    const {user} = useSelector(state => state.user);
 
     const handleChange = (event) => {
         const name = event.target.name;
@@ -19,8 +22,7 @@ function Login() {
             usuario: event.target[0].value,
             senha: event.target[1].value
         }
-        let login = await requestLogin(requestBody);
-        console.log("ret login", login);
+        dispatch(authUser(requestBody))
     }
 
     return (
