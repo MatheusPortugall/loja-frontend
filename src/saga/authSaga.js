@@ -1,18 +1,17 @@
-import { call, put, takeLatest } from 'redux-saga/effects';
+import { call, put, takeEvery } from 'redux-saga/effects';
 import * as API from '../api/authApi';
-import * as actions from '../actions/authActions';
+import { loginSuccess, loginError } from '../reducers/userSlice';
 import * as types from '../actions/types';
 import { login as setLogin } from '../services/authService';
 
 export function* login({ payload }) {
   try {
     const response = yield call(API.requestLogin, payload);
-    console.log("TOKEN: ", response.data);
     setLogin(response.data);
-    yield put(actions.loginSuccess())
+    yield put(loginSuccess(response.data));
   } catch (error) {
     console.log(error);
-    yield put(actions.loginError(error))
+    yield put(loginError(error))
   }
 }
 
@@ -21,8 +20,8 @@ export function* logout(){
 }
 
 function* authSaga() {
-  yield takeLatest(types.LOGIN, login);
-  yield takeLatest(types.LOGOUT, logout);
+  yield takeEvery(types.LOGIN, login);
+  yield takeEvery(types.LOGOUT, logout);
 }
 
 export default authSaga;
