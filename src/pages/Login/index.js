@@ -1,14 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Login.module.css";
 import { authUser } from '../../actions/authActions';
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
 
     const [login, setLogin] = useState({});
     const dispatch = useDispatch();
-    const {user} = useSelector(state => state.user);
+    const isLogged = useSelector(state => state.user.isLogged);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (isLogged) {
+            navigate('/home');
+          }
+      }, [isLogged, navigate]);
 
     const handleChange = (event) => {
         const name = event.target.name;
@@ -24,6 +31,8 @@ function Login() {
         }
         dispatch(authUser(requestBody))
     }
+
+    
 
     return (
         <section className={styles.loginContainer}>

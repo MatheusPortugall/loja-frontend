@@ -1,0 +1,14 @@
+.homeTitle {
+    font-family: var(--font);
+    margin-top: 25px;
+    margin-left: 15px;
+}
+
+.containerProducts {
+    margin-left: 15px;
+}
+
+.listCards {
+    display: flex;
+    flex-wrap: wrap;
+}
