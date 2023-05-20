@@ -1,0 +1,75 @@
+.modalCart {
+    font-family: var(--font);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modalCart h2 {
+    font-weight: bolds;
+}
+
+.modalCart h2, .modalCart .buttonGroup, .modalCart span {
+    padding-bottom: 12px;
+}
+
+.buttonGroup:last-child {
+    margin-top: 25px;
+    margin-bottom: -30px;
+}
+
+.buttonGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.buttonGroup span {
+    border: 1px solid var(--subtext-color);
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+.buttonGroup button {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 40px;
+    margin-right: 3px;
+    margin-top: 6px;
+}   
+
+.fail {
+    color: var(--text-color-invert);
+    border: 2px solid var(--fail-color);
+    background: var(--fail-color);
+}
+
+.success {
+    color: var(--text-color-invert);
+    border: 2px solid var(--success-color);
+    background: var(--success-color);
+}
+
+.info {
+    color: var(--text-color-invert);
+    border: 2px solid var(--bg-colors);
+    background: var(--bg-color);
+}
+
+.info:hover {
+    transition: 0.3s;
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    background: var(--text-color-invert);
+}
+
+.empty {
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    background: var(--text-color-invert);
+}
